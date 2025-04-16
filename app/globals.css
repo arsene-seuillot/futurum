@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
+/* === Base Variables === */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1f2937; /* gray-800 */
+  --primary: #2563eb; /* blue-600 */
+  --accent: #f97316; /* orange-500 */
+
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* === Dark Mode Variables === */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a; /* slate-900 */
+    --foreground: #f1f5f9; /* slate-100 */
+    --primary: #3b82f6; /* blue-500 */
+    --accent: #fb923c; /* orange-400 */
   }
 }
 
+/* === Theme Setup === */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-[var(--background)] text-[var(--foreground)] font-sans antialiased;
+  line-height: 1.75;
+}
+
+/* === Links === */
+a {
+  @apply text-[var(--primary)] hover:underline hover:opacity-80 transition;
+}
+
+/* === Headings === */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold text-[var(--foreground)] tracking-tight;
+}
+
+/* === Custom Classes (optionnel) === */
+.container {
+  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* === Custom Buttons === */
+.btn {
+  @apply inline-block px-5 py-2 rounded-2xl bg-[var(--primary)] text-white font-semibold shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-200 hover:-translate-y-1;
+
+  /* Ajout de bordures arrondies et effet de focus */
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  background-clip: padding-box;
+}
+
+.btn:hover {
+  background-color: rgba(37, 99, 235, 0.9); /* Couleur un peu plus claire au survol */
+  border-color: rgba(37, 99, 235, 0.9); /* Ajout d'un effet de bordure au survol */
+}
+
+/* === Custom Links (pour les liens des pages) === */
+.link {
+  @apply text-[var(--primary)] hover:text-[var(--accent)] hover:underline transition-all duration-200;
 }

@@ -1,6 +1,5 @@
-// app/layout.tsx
 import Link from 'next/link'
-import './globals.css' // si t’as un fichier CSS global
+import './globals.css'
 
 export const metadata = {
   title: 'Futurum',
@@ -10,16 +9,17 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
-      <body>
-        <header>
-          <nav>
-            <Link href="/">Home</Link> |{' '}
-            <Link href="/about">About</Link> |{' '}
-            <Link href="/tools">Tools</Link>
+      <body className="bg-gray-50 text-gray-800 font-sans">
+        <header className="bg-white shadow-md py-4 px-8">
+          <nav className="flex gap-6 text-lg font-medium">
+            <Link href="/" className="hover:text-blue-600">Home</Link>
+            <Link href="/about" className="hover:text-blue-600">About</Link>
+            <Link href="/tools" className="hover:text-blue-600">Tools</Link>
           </nav>
         </header>
-        <main>{children}</main>
+        <main className="max-w-4xl mx-auto px-6 py-10">{children}</main>
       </body>
     </html>
   )
 }
+

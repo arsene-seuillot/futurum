@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main>
-      <div> je suis une fleur </div>
+      <div>Bienvenue sur Futurum, le site d'Elsa.</div>
       <ul>
           <li>
             <Link href="/about">À propos</Link>
