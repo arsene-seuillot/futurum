@@ -1,8 +1,8 @@
-export default function Page() {
+export default function Tool2() {
     return (
-        <div>
-            <h1>Tool 2</h1>
-            <p>This is the tool 2 page.</p>
-        </div>
-    );
-}
+      <>
+        <h1>Tool 2</h1>
+        <p>Présentation ou exécution de l’outil.</p>
+      </>
+    )
+  }
