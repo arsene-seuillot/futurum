@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import { Button } from "@/components/ui/button"; // Assurez-vous que le chemin d'importation est correct
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"; // Assurez-vous que le chemin d'importation est correct
 
 const questions = [
   {
@@ -48,9 +50,18 @@ export default function Questionnaire() {
       }
     });
 
+    // Gérer le cas où aucune réponse positive n'est donnée
+    if (Object.keys(scores).length === 0) {
+      return "Aucun secteur dominant trouvé (essayez de répondre 'Oui' à certaines questions)";
+    }
+
     const best = Object.entries(scores).sort((a, b) => b[1] - a[1])[0];
-    return best ? best[0] : "Aucun secteur trouvé";
+    // Pas besoin de vérifier `best` ici car on a déjà géré le cas où scores est vide
+    return best[0];
   };
+
+  // Vérifie si toutes les questions ont été répondues
+  const allAnswered = answers.every((answer) => answer !== null);
 
   return (
     <div className="container py-8">
@@ -60,81 +71,47 @@ export default function Questionnaire() {
         <div key={index} className="mb-4">
           <p className="font-medium mb-2">{q.text}</p>
           <div className="flex gap-4">
-            <button
+            <Button
+              variant={answers[index] === true ? "default" : "outline"}
               onClick={() => handleAnswer(index, true)}
-              className={`px-4 py-2 rounded-xl font-medium transition 
-          ${
-            answers[index] === true
-              ? "bg-blue-600 text-white"
-              : "bg-gray-200 text-gray-800 hover:bg-blue-100"
-          }
-        `}
             >
               Oui
-            </button>
-            <button
+            </Button>
+            <Button
+              variant={answers[index] === false ? "destructive" : "outline"}
               onClick={() => handleAnswer(index, false)}
-              className={`px-4 py-2 rounded-xl font-medium transition 
-          ${
-            answers[index] === false
-              ? "bg-orange-500 text-white"
-              : "bg-gray-200 text-gray-800 hover:bg-orange-100"
-          }
-        `}
             >
               Non
-            </button>
+            </Button>
           </div>
         </div>
       ))}
 
-      <button
-        className="btn mt-6 bg-blue-700 hover:bg-blue-800"
+      <Button
+        className="mt-6"
         onClick={() => setShowResult(true)}
+        disabled={!allAnswered || showResult} // Désactiver si pas toutes les réponses ou si résultat déjà affiché
       >
         Voir mon résultat
-      </button>
+      </Button>
 
-      {showResult && (
-        <div className="mt-8 p-4 bg-gray-100 dark:bg-gray-800 rounded-xl">
-          <h2 className="text-xl font-semibold mb-2">Secteur recommandé :</h2>
-          <p className="text-2xl">{calculateResult()}</p>
-        </div>
-      )}
+      {showResult &&
+        allAnswered && ( // Afficher seulement si showResult est vrai ET toutes les questions sont répondues
+          <Card className="mt-8">
+            <CardHeader>
+              <CardTitle>Secteur recommandé :</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-2xl">{calculateResult()}</p>
+            </CardContent>
+          </Card>
+        )}
+      {showResult &&
+        !allAnswered && ( // Message si on clique sur voir résultat sans avoir tout répondu
+          <p className="mt-4 text-red-600">
+            Veuillez répondre à toutes les questions.
+          </p>
+        )}
     </div>
-  );
-}
-
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
-export default function Questionnaire() {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Questionnaire d'aide à l'orientation</CardTitle>
-        <CardDescription>
-          Ce questionnaire vous aidera à identifier les secteurs qui
-          correspondent le mieux à vos intérêts et compétences.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <p>
-          Répondez aux questions suivantes pour obtenir une recommandation
-          personnalisée.
-        </p>
-        {/* Intégrer le questionnaire interactif ici */}
-      </CardContent>
-      <CardFooter>
-        <Button>Commencer le questionnaire</Button> {/* Bouton placeholder */}
-      </CardFooter>
-    </Card>
   );
 }

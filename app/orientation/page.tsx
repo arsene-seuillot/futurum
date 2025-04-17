@@ -26,7 +26,7 @@ export default function Orientation() {
         <Button asChild variant="outline">
           <Link href="/orientation/formations">Explorer les formations</Link>
         </Button>
-        <Button asChild variant="default">
+        <Button asChild className="text-black" variant="outline">
           <Link href="/orientation/questionnaire">
             Commencer le questionnaire
           </Link>
