@@ -9,13 +9,10 @@ export default function Home() {
             <Link href="/about">À propos</Link>
           </li>
           <li>
-            <Link href="/tools">Tous les outils</Link>
+            <Link href="/orientation">Aide à l'orientation</Link>
           </li>
           <li>
-            <Link href="/tools/tool1">Tool 1</Link>
-          </li>
-          <li>
-            <Link href="/tools/tool2">Tool 2</Link>
+            <Link href="/orientation/questionnaire">Questionnaire d'orientation</Link>
           </li>
       </ul>
     </main>
