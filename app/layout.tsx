@@ -2,6 +2,9 @@ import Link from "next/link";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Inter as FontSans } from "next/font/google";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -26,33 +29,85 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container flex h-14 max-w-screen-2xl items-center">
-            <nav className="flex items-center space-x-4 lg:space-x-6">
-              <Link
-                href="/"
-                className="mr-6 flex items-center space-x-2 font-bold"
-              >
-                Futurum
+        <header className="border-b bg-white sticky top-0 z-10">
+          {/* Utiliser container ici pour garder le header centré et limité */}
+          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Link href="/">
+                <div className="bg-teal-700 text-white font-bold py-2 px-4 rounded">
+                  FUTURUM
+                </div>
               </Link>
+              <p className="text-sm font-medium text-gray-600 hidden sm:block">
+                Votre avenir commence ici
+              </p>
+            </div>
+
+            <div className="hidden md:flex items-center gap-4">
               <Link
                 href="/orientation"
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                className="text-gray-700 hover:text-teal-700 transition-colors font-medium"
               >
                 Orientation
               </Link>
               <Link
-                href="/about"
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                href="/a-propos"
+                className="text-gray-700 hover:text-teal-700 transition-colors font-medium"
               >
                 À propos
               </Link>
-            </nav>
+            </div>
+
+            <div className="relative w-full max-w-[200px]">
+              <Input
+                type="text"
+                placeholder="Rechercher..."
+                className="pr-8 rounded-full border-gray-300 focus:border-teal-500 focus:ring-teal-500"
+              />
+              <Button
+                size="icon"
+                variant="ghost"
+                className="absolute right-0 top-0 h-full text-gray-500"
+              >
+                <Search className="h-4 w-4" />
+              </Button>
+            </div>
           </div>
         </header>
-        <main className="container max-w-screen-lg mx-auto px-4 py-10">
-          {children}
-        </main>
+        <main className="px-4 py-10">{children}</main>
+        <footer className="bg-gray-100 py-8 mt-auto px-4">
+          <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center gap-3 mb-4 md:mb-0">
+              <div className="bg-teal-700 text-white font-bold py-2 px-4 rounded">
+                FUTURUM
+              </div>
+              <p className="text-sm font-medium text-gray-600">
+                © 2024 Tous droits réservés
+              </p>
+            </div>
+
+            <div className="flex gap-6">
+              <Link
+                href="/contact"
+                className="text-gray-700 hover:text-teal-700 transition-colors"
+              >
+                Contact
+              </Link>
+              <Link
+                href="/mentions-legales"
+                className="text-gray-700 hover:text-teal-700 transition-colors"
+              >
+                Mentions légales
+              </Link>
+              <Link
+                href="/confidentialite"
+                className="text-gray-700 hover:text-teal-700 transition-colors"
+              >
+                Confidentialité
+              </Link>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );

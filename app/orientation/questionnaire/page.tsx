@@ -285,7 +285,7 @@ export default function Questionnaire() {
     ((currentQuestionIndex + (showResult ? 1 : 0)) / questions.length) * 100;
 
   return (
-    <div className="container py-8 flex flex-col items-center">
+    <div className="py-8 flex flex-col items-center">
       <h1 className="text-3xl font-bold mb-6 text-center">
         Questionnaire d'orientation
       </h1>
