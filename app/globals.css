@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+html, body, :root {
+  height: 100%;
+}
+
 /* === Base Variables === */
 :root { /* gray-800 */
   --primary: oklch(0.21 0.034 264.665); /* blue-600 */
