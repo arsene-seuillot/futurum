@@ -74,7 +74,9 @@ export default function RootLayout({
             </div>
           </div>
         </header>
+
         <main className="px-4 py-10">{children}</main>
+
         <footer className="bg-gray-100 py-8 mt-auto px-4">
           <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-3 mb-4 md:mb-0">

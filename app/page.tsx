@@ -5,9 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Hero Section */}
-      {/* La section Hero utilise déjà un positionnement absolu/relatif, pas besoin de container */}
+    <div className="flex flex-col">
       <section className="relative h-[500px] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
@@ -19,7 +17,6 @@ export default function Home() {
           />
         </div>
 
-        {/* Ajouter px-4 ici pour le contenu textuel */}
         <div className="px-4 h-full relative z-1">
           <div className="flex flex-col h-full justify-center items-center text-center gap-12">
             <div className="bg-white/30 backdrop-blur-xs p-8 rounded-xl shadow-lg max-w-3xl">
@@ -31,7 +28,7 @@ export default function Home() {
                 adaptées à votre profil
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="flex flex-col md:flex-row gap-4 justify-around">
                 <Link href="/orientation">
                   <Button className="bg-teal-700 hover:bg-teal-800 text-white h-auto py-6 rounded-xl flex flex-col items-center gap-2">
                     <span className="text-lg font-medium">
@@ -63,7 +60,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }
