@@ -29,7 +29,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <header className="border-b bg-white sticky top-0 z-10">
+        <header className="border-b bg-white sticky top-0 z-100">
           {/* Utiliser container ici pour garder le header centré et limité */}
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
