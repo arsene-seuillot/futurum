@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Card,
   CardContent,
@@ -5,6 +7,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
+
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
+import Link from "next/link";
+
 
 export default function Formations() {
   return (
@@ -17,10 +26,59 @@ export default function Formations() {
       </CardHeader>
       <CardContent>
         <p>
-          Présentation détaillée des différentes formations disponibles, des
-          prérequis, des débouchés et des établissements qui les proposent.
+          Vous cherchez une formation pour travailler dans les secteurs en tension ?
+          Vous trouverez ici des formations pour chacun des différents secteurs.
         </p>
-        {/* Contenu détaillé sur les formations à ajouter ici */}
+        
+        <Button asChild variant="outline">
+          <Link href="/orientation/formations/securite">
+            Sécurité
+          </Link>     
+          </Button>
+          <br />
+          
+
+          <Button asChild variant="outline">
+          <p>
+            Numérique
+          </p>
+          </Button>
+          <br />
+
+          <Button asChild variant="outline">
+          <p>
+            Agroalimentaire
+          </p>
+          </Button>
+          <br />
+
+          <Button asChild variant="outline">
+          <p>
+            Aéronautique
+          </p>
+          </Button>
+          <br />
+          
+          <Button asChild variant="outline">
+          <p>
+            Artisanat
+          </p>
+          </Button>
+          <br />
+
+          <Button asChild variant="outline">
+          <p>
+            Ferroviaire
+          </p>
+          </Button>
+          <br />
+
+          <Button asChild variant="outline">
+          <p>
+            Textile
+          </p>
+          </Button>
+          <br />
       </CardContent>
     </Card>
   );
