@@ -244,7 +244,7 @@ const questions = [
 export default function Questionnaire() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<(boolean | null)[]>(
-    Array(questions.length).fill(null)
+    Array(questions.length).fill(null),
   );
   const [showResult, setShowResult] = useState(false);
 

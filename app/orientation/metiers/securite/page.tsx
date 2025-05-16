@@ -1,22 +1,9 @@
-"use client";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
-import Link from "next/link";
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import Image from "next/image";
 
 export default function Metier_Securite() {
   return (
     <div>
-
       <Card>
         <section className="py-16 bg-gradient-to-b from-teal-50 to-white px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-screen-lg mx-auto">
@@ -31,7 +18,9 @@ export default function Metier_Securite() {
             </div>
             <div>
               <div className="bg-teal-700 text-white py-3 px-6 rounded-lg inline-block mb-6">
-                <h2 className="text-2xl font-bold">AGENT / AGENTE DE SÉCURITÉ</h2>
+                <h2 className="text-2xl font-bold">
+                  AGENT / AGENTE DE SÉCURITÉ
+                </h2>
               </div>
 
               <div className="space-y-4 text-gray-700">
@@ -99,7 +88,8 @@ export default function Metier_Securite() {
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
                       <span className="text-teal-700 mr-2">-</span>
-                      Bac pro cybersécurité, informatique et réseaux, électronique
+                      Bac pro cybersécurité, informatique et réseaux,
+                      électronique
                     </li>
                     <li className="flex items-start">
                       <span className="text-teal-700 mr-2">-</span>
@@ -112,8 +102,6 @@ export default function Metier_Securite() {
           </div>
         </section>
       </Card>
-
-
     </div>
   );
 }
