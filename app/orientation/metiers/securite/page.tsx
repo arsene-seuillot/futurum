@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Metier_Securite() {
   return (
@@ -47,11 +48,21 @@ export default function Metier_Securite() {
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
                       <span className="text-teal-700 mr-2">-</span>
-                      CAP agent de sécurité
+                      <Link
+                        href=""
+                        className="hover:text-teal-600 hover:underline transition-colors"
+                      >
+                        CAP agent de sécurité
+                      </Link>
                     </li>
                     <li className="flex items-start">
                       <span className="text-teal-700 mr-2">-</span>
-                      Bac pro métier de la sécurité
+                      <Link
+                        href=""
+                        className="hover:text-teal-600 hover:underline transition-colors"
+                      >
+                        Bac pro métier de la sécurité
+                      </Link>
                     </li>
                   </ul>
 
@@ -61,7 +72,12 @@ export default function Metier_Securite() {
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
                       <span className="text-teal-700 mr-2">-</span>
-                      BTS Management opérationnel de la sécurité
+                      <Link
+                        href=""
+                        className="hover:text-teal-600 hover:underline transition-colors"
+                      >
+                        BTS Management opérationnel de la sécurité
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -73,12 +89,22 @@ export default function Metier_Securite() {
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
                       <span className="text-teal-700 mr-2">-</span>
-                      Licence professionnelle Agent de recherches privées
+                      <Link
+                        href=""
+                        className="hover:text-teal-600 hover:underline transition-colors"
+                      >
+                        Licence professionnelle Agent de recherches privées
+                      </Link>
                     </li>
                     <li className="flex items-start">
                       <span className="text-teal-700 mr-2">-</span>
-                      Sécurité des biens et des personnes spécialité activité
-                      juridique
+                      <Link
+                        href="/orientation/metiers/securite/ckoi"
+                        className="hover:text-teal-600 hover:underline transition-colors"
+                      >
+                        Sécurité des biens et des personnes spécialité activité
+                        juridique
+                      </Link>
                     </li>
                   </ul>
 
@@ -88,12 +114,22 @@ export default function Metier_Securite() {
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
                       <span className="text-teal-700 mr-2">-</span>
-                      Bac pro cybersécurité, informatique et réseaux,
-                      électronique
+                      <Link
+                        href=""
+                        className="hover:text-teal-600 hover:underline transition-colors"
+                      >
+                        Bac pro cybersécurité, informatique et réseaux,
+                        électronique
+                      </Link>
                     </li>
                     <li className="flex items-start">
                       <span className="text-teal-700 mr-2">-</span>
-                      BTS cybersécurité, informatique et réseaux, électronique
+                      <Link
+                        href=""
+                        className="hover:text-teal-600 hover:underline transition-colors"
+                      >
+                        BTS cybersécurité, informatique et réseaux, électronique
+                      </Link>
                     </li>
                   </ul>
                 </div>

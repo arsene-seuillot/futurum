@@ -26,7 +26,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
+          fontSans.variable
         )}
       >
         <header className="border-b bg-white sticky top-0 z-10">
@@ -44,18 +44,41 @@ export default function RootLayout({
             </div>
 
             <div className="hidden md:flex items-center gap-4">
-              <Link
-                href="/orientation"
-                className="text-gray-700 hover:text-teal-700 transition-colors font-medium"
+              <Button
+                variant="ghost"
+                asChild
+                className="hover:text-teal-700 transition-colors font-medium"
               >
-                Orientation
-              </Link>
-              <Link
-                href="/a-propos"
-                className="text-gray-700 hover:text-teal-700 transition-colors font-medium"
+                <Link href="/actualite">Actualité</Link>
+              </Button>
+              <Button
+                variant="ghost"
+                asChild
+                className="hover:text-teal-700 transition-colors font-medium"
               >
-                À propos
-              </Link>
+                <Link href="/temoignages">Témoignages</Link>
+              </Button>
+              <Button
+                variant="ghost"
+                asChild
+                className="hover:text-teal-700 transition-colors font-medium"
+              >
+                <Link href="/evenements">Évènements</Link>
+              </Button>
+              <Button
+                variant="ghost"
+                asChild
+                className="hover:text-teal-700 transition-colors font-medium"
+              >
+                <Link href="/orientation">Orientation</Link>
+              </Button>
+              <Button
+                variant="ghost"
+                asChild
+                className="hover:text-teal-700 transition-colors font-medium"
+              >
+                <Link href="/a-propos">À propos</Link>
+              </Button>
             </div>
 
             <div className="relative w-full max-w-[200px]">

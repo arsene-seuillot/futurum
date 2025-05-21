@@ -11,9 +11,9 @@ import {
 export default function Metiers() {
   return (
     <div className="max-w-4xl mx-auto p-4 sm:p-6">
-      <Card className="shadow-lg border-t-4 border-blue-600">
+      <Card className="shadow-lg border-t-4 border-teal-600">
         <CardHeader className="bg-gray-50 pb-6">
-          <CardTitle className="text-2xl sm:text-3xl text-blue-800">
+          <CardTitle className="text-2xl sm:text-3xl text-teal-800">
             Les métiers d'avenir
           </CardTitle>
           <CardDescription className="text-gray-600 mt-2 text-lg">
@@ -34,7 +34,7 @@ export default function Metiers() {
             <Button
               asChild
               variant="outline"
-              className="h-16 font-medium hover:bg-blue-50 hover:border-blue-300 transition-colors"
+              className="h-16 font-medium hover:bg-teal-50 hover:border-teal-300 transition-colors"
             >
               <Link
                 href="/orientation/metiers/securite"
@@ -47,7 +47,7 @@ export default function Metiers() {
             <Button
               asChild
               variant="outline"
-              className="h-16 font-medium hover:bg-blue-50 hover:border-blue-300 transition-colors"
+              className="h-16 font-medium hover:bg-teal-50 hover:border-teal-300 transition-colors"
             >
               <Link
                 href="#"
@@ -60,7 +60,7 @@ export default function Metiers() {
             <Button
               asChild
               variant="outline"
-              className="h-16 font-medium hover:bg-blue-50 hover:border-blue-300 transition-colors"
+              className="h-16 font-medium hover:bg-teal-50 hover:border-teal-300 transition-colors"
             >
               <Link
                 href="#"
@@ -73,7 +73,7 @@ export default function Metiers() {
             <Button
               asChild
               variant="outline"
-              className="h-16 font-medium hover:bg-blue-50 hover:border-blue-300 transition-colors"
+              className="h-16 font-medium hover:bg-teal-50 hover:border-teal-300 transition-colors"
             >
               <Link
                 href="#"
@@ -86,7 +86,7 @@ export default function Metiers() {
             <Button
               asChild
               variant="outline"
-              className="h-16 font-medium hover:bg-blue-50 hover:border-blue-300 transition-colors"
+              className="h-16 font-medium hover:bg-teal-50 hover:border-teal-300 transition-colors"
             >
               <Link
                 href="#"
@@ -99,7 +99,7 @@ export default function Metiers() {
             <Button
               asChild
               variant="outline"
-              className="h-16 font-medium hover:bg-blue-50 hover:border-blue-300 transition-colors"
+              className="h-16 font-medium hover:bg-teal-50 hover:border-teal-300 transition-colors"
             >
               <Link
                 href="#"
@@ -112,7 +112,7 @@ export default function Metiers() {
             <Button
               asChild
               variant="outline"
-              className="h-16 font-medium hover:bg-blue-50 hover:border-blue-300 transition-colors"
+              className="h-16 font-medium hover:bg-teal-50 hover:border-teal-300 transition-colors"
             >
               <Link
                 href="#"
