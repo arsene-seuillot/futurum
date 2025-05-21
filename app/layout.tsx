@@ -30,7 +30,6 @@ export default function RootLayout({
         )}
       >
         <header className="border-b bg-white sticky top-0 z-10">
-          {/* Utiliser container ici pour garder le header centré et limité */}
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Link href="/">
@@ -49,7 +48,7 @@ export default function RootLayout({
                 asChild
                 className="hover:text-teal-700 transition-colors font-medium"
               >
-                <Link href="/actualite">Actualité</Link>
+                <Link href="/actus">Actualité</Link>
               </Button>
               <Button
                 variant="ghost"
