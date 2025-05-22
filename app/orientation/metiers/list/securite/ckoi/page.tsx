@@ -23,7 +23,7 @@ export default function Page() {
         </p>
       </div>
 
-      <Link href="/orientation/metiers/securite/ckoi/secu">
+      <Link href="/orientation/metiers/list/securite/ckoi/secu">
         <button className="bg-teal-500 hover:bg-teal-600 text-white font-medium py-2 px-6 rounded-md transition duration-300 shadow-md flex items-center">
           Répertoires des formations{" "}
           <ArrowRight className="inline h-4 w-4 ml-2" />

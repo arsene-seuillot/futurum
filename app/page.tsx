@@ -29,7 +29,7 @@ export default function Home() {
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
-                <Link href="/orientation" className="w-full">
+                <Link href="/orientation/questionnaire" className="w-full">
                   <Button className="bg-teal-700 hover:bg-teal-800 text-white h-auto py-6 rounded-xl w-full flex flex-col items-center gap-2">
                     <span className="text-lg font-medium">
                       Test d'orientation

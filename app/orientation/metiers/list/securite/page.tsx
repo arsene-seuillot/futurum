@@ -99,7 +99,7 @@ export default function Metier_Securite() {
                     <li className="flex items-start">
                       <span className="text-teal-700 mr-2">-</span>
                       <Link
-                        href="/orientation/metiers/securite/ckoi"
+                        href="/orientation/metiers/list/securite/ckoi"
                         className="hover:text-teal-600 hover:underline transition-colors"
                       >
                         Sécurité des biens et des personnes spécialité activité

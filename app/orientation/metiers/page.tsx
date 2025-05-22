@@ -37,7 +37,7 @@ export default function Metiers() {
               className="h-16 font-medium hover:bg-teal-50 hover:border-teal-300 transition-colors"
             >
               <Link
-                href="/orientation/metiers/securite"
+                href="/orientation/metiers/list"
                 className="w-full h-full flex items-center justify-center"
               >
                 Sécurité
