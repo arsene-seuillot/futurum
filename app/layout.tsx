@@ -55,28 +55,21 @@ export default function RootLayout({
                 asChild
                 className="hover:text-teal-700 transition-colors font-medium"
               >
-                <Link href="/temoignages">Témoignages</Link>
+                <Link href="/">Témoignages</Link>
               </Button>
               <Button
                 variant="ghost"
                 asChild
                 className="hover:text-teal-700 transition-colors font-medium"
               >
-                <Link href="/evenements">Évènements</Link>
+                <Link href="/">Évènements</Link>
               </Button>
               <Button
                 variant="ghost"
                 asChild
                 className="hover:text-teal-700 transition-colors font-medium"
               >
-                <Link href="/orientation">Orientation</Link>
-              </Button>
-              <Button
-                variant="ghost"
-                asChild
-                className="hover:text-teal-700 transition-colors font-medium"
-              >
-                <Link href="/a-propos">À propos</Link>
+                <Link href="/">À propos</Link>
               </Button>
             </div>
 
